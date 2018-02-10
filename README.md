@@ -3,4 +3,4 @@
 liburrr: Indonesia holiday R package
 ====================================
 
-*~ Libur telah tiba, libur telah tiba ~* :musical_note::musical_note:
+*Libur telah tiba, libur telah tiba* :musical\_note::musical\_note::musical\_note:

@@ -16,6 +16,4 @@ options(tibble.print_min = 5, tibble.print_max = 5)
 
 # liburrr: Indonesia holiday R package
 
-*~ Libur telah tiba, libur telah tiba ~*
-
-:musical_notes:
+*Libur telah tiba, libur telah tiba* :musical_note::musical_note::musical_note:
