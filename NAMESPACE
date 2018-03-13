@@ -2,3 +2,4 @@
 
 export(is_weekday)
 export(is_weekend)
+importFrom(tibble,tibble)
