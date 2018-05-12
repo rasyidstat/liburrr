@@ -13,6 +13,7 @@
 #'
 #' @export
 is_holiday <- function(x) {
+  x <- as.Date(x)
   ret <- with(libur, holiday[match(x, date)])
   ret <- !is.na(ret)
   ret
