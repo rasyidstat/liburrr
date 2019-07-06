@@ -9,7 +9,9 @@ output:
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE
 )
 options(tibble.print_min = 5, tibble.print_max = 5)
 ```
@@ -32,11 +34,12 @@ devtools::install_github("rasyidstat/liburrr")
 ```{r}
 library(liburrr)
 library(dplyr)
-df <- data.frame(dt = as.Date(c("2016-01-01","2016-01-02","2016-01-03")))
+df <- data.frame(dt = seq.Date(as.Date("2020-01-01"), as.Date("2020-01-07"), "day") )
 df <- df %>%
   mutate(weekend_flag = is_weekend(dt),
-         holiday_flag = is_holiday(dt),
-         holiday_flag_all = ifelse(weekend_flag == FALSE, holiday_flag, weekend_flag))
+         holiday_flag = is_libur(dt),
+         holiday_flag_all = ifelse(weekend_flag == FALSE, holiday_flag, weekend_flag),
+         holiday_desc = is_libur(dt, label = TRUE))
 df
 ```
 

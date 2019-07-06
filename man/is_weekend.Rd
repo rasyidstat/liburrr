@@ -2,7 +2,6 @@
 % Please edit documentation in R/is_weekend.R
 \name{is_weekend}
 \alias{is_weekend}
-\alias{is_weekend}
 \alias{is_weekday}
 \title{Check if date input is a weekend or not}
 \usage{

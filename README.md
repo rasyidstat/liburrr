@@ -21,22 +21,19 @@ Example
 ``` r
 library(liburrr)
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-df <- data.frame(dt = as.Date(c("2016-01-01","2016-01-02","2016-01-03")))
+df <- data.frame(dt = seq.Date(as.Date("2020-01-01"), as.Date("2020-01-07"), "day") )
 df <- df %>%
   mutate(weekend_flag = is_weekend(dt),
-         holiday_flag = is_holiday(dt),
-         holiday_flag_all = ifelse(weekend_flag == FALSE, holiday_flag, weekend_flag))
+         holiday_flag = is_libur(dt),
+         holiday_flag_all = ifelse(weekend_flag == FALSE, holiday_flag, weekend_flag),
+         holiday_desc = is_libur(dt, label = TRUE))
 df
-#>           dt weekend_flag holiday_flag holiday_flag_all
-#> 1 2016-01-01        FALSE         TRUE             TRUE
-#> 2 2016-01-02         TRUE        FALSE             TRUE
-#> 3 2016-01-03         TRUE        FALSE             TRUE
+#>           dt weekend_flag holiday_flag holiday_flag_all      holiday_desc
+#> 1 2020-01-01        FALSE         TRUE             TRUE Tahun Baru Masehi
+#> 2 2020-01-02        FALSE        FALSE            FALSE              <NA>
+#> 3 2020-01-03        FALSE        FALSE            FALSE              <NA>
+#> 4 2020-01-04         TRUE        FALSE             TRUE              <NA>
+#> 5 2020-01-05         TRUE        FALSE             TRUE              <NA>
+#> 6 2020-01-06        FALSE        FALSE            FALSE              <NA>
+#> 7 2020-01-07        FALSE        FALSE            FALSE              <NA>
 ```

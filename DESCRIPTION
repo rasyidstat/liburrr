@@ -1,11 +1,11 @@
 Package: liburrr
 Type: Package
 Title: Indonesia holiday
-Version: 0.1.0
+Version: 0.1.1
 Author: Rasyid Ridha
 Maintainer: Rasyid Ridha <rasyidstat@gmail.com>
 Description: An R package contains Indonesia holiday date function and reference
 URL: http://github.com/rasyidstat/liburrr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
