@@ -8,6 +8,8 @@ is_libur(x, label = FALSE)
 }
 \arguments{
 \item{x}{date input}
+
+\item{label}{return holiday description if set TRUE}
 }
 \value{
 TRUE or FALSE; or return holiday description

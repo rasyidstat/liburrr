@@ -2,7 +2,6 @@
 
 export(is_holiday)
 export(is_libur)
-export(is_long_weekend)
 export(is_weekday)
 export(is_weekend)
 importFrom(tibble,tibble)
